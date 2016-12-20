@@ -1,0 +1,278 @@
+.center-text { 
+  text-align: center; 
+}
+
+.article-box, .team-area, .pre-order, .mail-area { 
+  margin: 4em;
+  margin-left: 5%;
+  margin-right: 5%;
+  
+  @include media($medium-screen) {
+    margin: 4em;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+
+  article.type-system-geometric {
+    $base-border-radius: 3px;
+    $base-line-height: 1.5em;
+    $base-spacing: 1.5em;
+    $medium-screen: 40em;
+    text-align: center;
+
+    @include clearfix;
+    font-family: $base-font-family;
+    text-align: left;
+
+    h1, h2, h3, p {
+      margin: 0;
+    }
+
+    hr {
+      border-bottom: 1px solid $light-gray;
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      margin: $base-spacing 0;
+    }
+
+    p {
+      color: $base-font-color;
+      line-height: $base-line-height;
+    }
+
+    a {
+      color: $action-color;
+      text-decoration: none;
+    }
+
+    .type {
+      border-bottom: 1px solid;
+      display: inline-block;
+      font-family: $base-font-family;
+      font-size: 0.7em;
+      font-weight: 800;
+      margin-bottom: 2em;
+      padding: 0.3em 0;
+      text-align: left;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-family: $base-font-family;
+      font-size: 5zem;
+      margin-bottom: 0.5em;
+      // text-align: left;
+
+      @include media($medium-screen) {
+        font-size: 2.6em;
+      }
+    }
+
+    h2 {
+      font-family: $base-font-family;
+      font-size: 1.2em;
+      font-style: italic;
+      font-weight: 400;
+      line-height: 1.4em;
+      margin-bottom: 1.1em;
+
+      @include media($medium-screen) {
+        font-size: 1.3em;
+      }
+    }
+
+    code {
+      background: #F7F7F7;
+      border-radius: $base-border-radius * 1.5;
+      border: 1px solid #E0E0E0;
+      font-size: 0.7em;
+      font-style: normal;
+      padding: 0.1em 0.4em;
+      white-space: nowrap;
+    }
+
+    h3 {
+      font-family: $base-font-family;
+      font-size: 1.4em;
+      font-weight: 400;
+      line-height: 1.3em;
+      margin-bottom: 0.4em;
+    }
+
+    p.date {
+      color: transparentize($base-font-color, 0.6);
+      font-family: $base-font-family;
+      font-size: 0.9em;
+      font-style: italic;
+      margin-bottom: 0.3em;
+    }
+
+    p {
+      font-family: $base-font-family;
+      font-size: 1.05em;
+      line-height: 1.5em;
+      margin-bottom: 1.5em;
+      .italic-text {
+        font-style: italic;
+      }
+    }
+
+    a.read-more {
+      display: inline-block;
+      font-family: $base-font-family;
+      font-size: 0.8em;
+      font-weight: 700;
+      margin-left: 0.2em;
+      position: relative;
+      text-transform: uppercase;
+
+      span {
+        font-family: $base-font-family;
+        font-size: 1.5em;
+        font-style: normal;
+        position: absolute;
+        right: -12px;
+        top: -1px;
+      }
+    }
+
+    hr {
+      width: 3em;
+    }
+
+    p.author {
+      font-family: $base-font-family;
+    }
+  }
+}
+
+
+// MEET THE TEAM AREA
+@mixin grid-item-columns($columns) {
+  width: (100% / 12) * $columns;
+}
+
+.grid-items-lines {
+  text-align: center;
+  $base-background-color: white !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: 40em !default;
+  $large-screen: 53.75em !default;
+  $base-font-color: $dark-gray !default;
+  $grid-items-background: $base-background-color;
+  $grid-item-background: $base-background-color;
+  $grid-item-border: 1px solid transparentize($base-font-color, 0.8);
+  $grid-item-columns: 6;
+  $grid-item-big-columns: 12;
+  $grid-item-color: $base-font-color;
+  $grid-item-height: 22em;
+
+  @include clearfix;
+  position: relative;
+
+  .grid-item {
+    background: $grid-item-background;
+    border-bottom: $grid-item-border;
+    border-right: $grid-item-border;
+    cursor: pointer;
+    float: left;
+    height: $grid-item-height;
+    outline: none;
+    overflow: hidden;
+    padding: 2em;
+    margin: auto;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    width: 100%;
+
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-columns);
+    }
+
+    &:focus,
+    &:hover {
+      background: transparentize($grid-item-color, 0.95);
+    }
+  }
+
+  div.plant-e-logo img {
+    height: 6em;
+    margin-bottom: 2.6em;
+  }
+
+  .grid-item img {
+      display: block;
+      height: 10em;
+      margin-bottom: 2.6em;
+      opacity: 0.8;
+      margin: auto; 
+    }
+
+  .grid-item h1 {
+      color: $basecolor;
+      font-size: 1.3em;
+      font-weight: 200;
+      margin-top: 0.4em;
+      margin-bottom: 0.4em;
+    }
+
+  .grid-item p {
+      color: transparentize($grid-item-color, 0.4);
+      line-height: 1.5em;
+
+      @include media($medium-screen) {
+        max-width: 100%;
+      }
+    }
+
+  .grid-item-big {
+    @include media($large-screen) {
+      @include grid-item-columns($grid-item-big-columns);
+    }
+    p {
+      @include media($medium-screen) {
+        max-width: 60%;
+        margin: auto;
+      }
+    }
+  }
+
+  // this, below, might not be the most beautiful solution but it removes the outer borders by using the background color.
+  .bottom-cover {
+    background: $grid-items-background;
+    bottom: 0;
+    height: 3px;
+    position: absolute;
+    width: 100%;
+  }
+
+  .right-cover {
+    background: $grid-items-background;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    width: 4px;
+  }
+}
+
+.pre-order, .mail-area {
+  margin-top: 5em;
+  margin-bottom: 6em;
+  input {
+    margin-top: 3em;
+    margin-bottom: 6em;
+    width: 90%;
+    height: 4em;
+
+  }
+  p {
+    max-width: 90%;
+    margin: auto;
+     @include media($medium-screen) {
+        margin: auto;
+      }
+  }
+}
+

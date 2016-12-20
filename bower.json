@@ -1,0 +1,15 @@
+{
+  "name": "livinglight",
+  "private": true,
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "modernizr": "~2.8.1",
+    "bourbon": "^4.2.7",
+    "neat": "^1.8.0",
+    "bitters": "^1.4.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.1.2"
+  }
+}

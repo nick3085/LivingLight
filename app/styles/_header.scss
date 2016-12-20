@@ -1,0 +1,85 @@
+//HEADER IMAGE
+.image-gradient-dynamic {
+  $image-gradient-color-top: red;
+  $transparency-top: 1;
+  $image-gradient-color-bottom: green;
+  $transparency-bottom: 1;
+  $vertical-angle: 0deg;
+  $image-gradient-color-left: teal;
+  $transparency-left: 1;
+  $image-gradient-color-right: yellow;
+  $transparency-right: 1;
+  $horizontal-angle: 90deg;
+
+  line-height: 0;
+  position: relative;
+  width: 100%;
+
+  img {
+    height: auto;
+    left: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .copy {
+    left: 50%;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+
+    p {
+      position: relative;
+
+      img { 
+        opacity: 0.4;
+
+        &:focus,
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      @include media($large-screen) {
+        img {
+          opacity: 0.5;
+          &:focus,
+          &:hover {
+            opacity: 1;
+          }
+        } 
+      }
+    }
+  }
+
+  .overlay {
+    @include position(absolute, 0);
+    background-color: transparentize(
+      $image-gradient-color-top,
+      $transparency-top
+      );
+    background-image: linear-gradient($vertical-angle,
+      transparentize($image-gradient-color-top, $transparency-top),
+      transparentize($image-gradient-color-bottom, $transparency-bottom)
+      );
+    display: block;
+
+    &::after {
+      @include position(absolute, 0);
+      background-color: transparentize(
+        $image-gradient-color-left,
+        $transparency-right
+        );
+      background-image: linear-gradient($horizontal-angle,
+        transparentize($image-gradient-color-left, $transparency-left),
+        transparentize($image-gradient-color-right, $transparency-right)
+        );
+      content: "";
+      display: block;
+    }
+  }
+}
