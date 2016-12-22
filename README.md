@@ -1,6 +1,8 @@
-# README FILE
+# Living Light
 
-# generator-bourbon
+This is the product website for the [Living Light](https://livinglight.info/) product by [Ermi van Oers](http://www.ermivanoers.nl) in collaberation with [We.Umbrealla](http://www.weumbrella.com)
+
+## generator-bourbon
 
 [Yeoman](http://yeoman.io/) generator for scaffolding out an [Assemble](https://github.com/assemble/assemble) web project using [Bourbon](http://bourbon.io/), [Bourbon Neat](http://neat.bourbon.io/), and [Bitters](http://bitters.bourbon.io/).
 
@@ -19,6 +21,6 @@ Based on [generator-bones](https://github.com/matt-bailey/generator-bones), this
 ## License
 [MIT License](http://en.wikipedia.org/wiki/MIT_License)
 
-## Made by...
+## Made by
 
-[@nickdekale](https://nickderonde.com).
+[@nickdekale](https://nickderonde.com)
