@@ -1,6 +1,6 @@
 # Living Light
 
-This is the product website for the [Living Light](https://livinglight.info/) product by [Ermi van Oers](http://www.ermivanoers.nl) in collaberation with [We.Umbrealla](http://www.weumbrella.com)
+This is the product website for the [Living Light](https://livinglight.info/) product by [Ermi van Oers](http://www.ermivanoers.nl) in collaboration with [We.Umbrealla](http://www.weumbrella.com)
 
 ## generator-bourbon
 
