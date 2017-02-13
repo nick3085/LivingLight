@@ -1,0 +1,16 @@
+.js-fade-element-hide {
+  opacity: 1;
+  
+  @include media($large-screen) {
+    opacity: 0;
+  }
+}
+
+.js-fade-element-show {
+  opacity: 1;
+   
+  @include media($large-screen) {
+    opacity: 1;
+    transition: all 0.3s ease-in-out;
+  }
+}
