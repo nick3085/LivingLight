@@ -7,26 +7,36 @@
 // endbower
 
 @import "bower_components/bitters/base/_base.scss";
-@import 'header'; 
-@import 'articles'; 
-@import 'footer';  
+@import 'header';
+@import 'articles';
+@import 'footer';
 
 @import 'animations';
 
 //image rendering speedup
-// @include image-rendering(optimizeSpeed); 
+// @include image-rendering(optimizeSpeed);
 
 body {
   font-family: 'Roboto', Helvetica, Arial, sans-serif;
   margin: 0;
+  $image-gradient-color-top: #1A1A1A;
+  //$transparency-top: 1;
+  $image-gradient-color-bottom: #DFDFDF;
+  //$transparency-bottom: 1;
+  //$vertical-angle: 0deg;
+  //$image-gradient-color-left: teal;
+  //$transparency-left: 1;
+  //$image-gradient-color-right: yellow;
+  //$transparency-right: 1;
+  //$horizontal-angle: 90deg;
 }
 
   p {
     color: rgba(51, 51, 51, 0.8);
   }
 
-  .pre-order input{ 
-    background-color: $red-preorder; 
+  .pre-order input{
+    background-color: $red-preorder;
   }
 
 //message styling when browser is old

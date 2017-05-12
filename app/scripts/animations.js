@@ -1,9 +1,9 @@
 $(document).ready(function() {
-  var element = document.getElementById("js-fadeInElement");
+  var element = document.getElementById('js-fadeInElement');
   $(element).addClass('js-fade-element-hide');
 
   $(window).scroll(function() {
-    if( $("#js-fadeInElement").length > 0 ) {
+    if( $('#js-fadeInElement').length > 0 ) {
       var elementTopToPageTop = $(element).offset().top;
       var windowTopToPageTop = $(window).scrollTop();
       var windowInnerHeight = window.innerHeight;

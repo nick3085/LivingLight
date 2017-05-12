@@ -1,4 +1,32 @@
-//HEADER IMAGE
+//VIDEO BANNER
+//video {
+//  position: fixed;
+//  top: 50%;
+//  left: 50%;
+//  min-width: 100%;
+//  min-height: 100%;
+//  width: auto;
+//  height: auto;
+//  z-index: -100;
+//  transform: translateX(-50%) translateY(-50%);
+//  background: url('//app/images/livinglightgirl1.jpg') no-repeat;
+//  background-size: cover;
+//  transition: 1s opacity;
+//}
+//.stopfade {
+//  opacity: .5;
+//}
+//
+//@media screen and (max-width: 500px) {
+//  div{width:70%;}
+//}
+//
+//@media screen and (max-device-width: 800px) {
+//  html { background: url(//app/images/livinglightgirl1.jpg) #000 no-repeat center center fixed; }
+//  #bgvid { display: none; }
+//}
+
+////HEADER IMAGE
 .image-gradient-dynamic {
   $image-gradient-color-top: red;
   $transparency-top: 1;
@@ -15,12 +43,25 @@
   position: relative;
   width: 100%;
 
-  img {
+  .header, img, video {
     height: auto;
     left: 0;
     position: relative;
     top: 0;
     width: 100%;
+    background: url('//app/images/livinglightgirl1.jpg') no-repeat;
+    background-size: cover;
+    transition: 1s opacity;
+
+    @media screen and (max-width: 500px) {
+      html { background: url(//app/images/livinglightgirl1.jpg) #000 no-repeat center center fixed; }
+      #bgvid { display: none; }
+    }
+
+    @media screen and (max-device-width: 800px) {
+      html { background: url(//app/images/livinglightgirl1.jpg) #000 no-repeat center center fixed; }
+      #bgvid { display: none; }
+    }
   }
 
   .copy {
@@ -35,7 +76,7 @@
     p {
       position: relative;
 
-      img { 
+      img  {
         opacity: 0.4;
 
         &:focus,
@@ -51,7 +92,7 @@
           &:hover {
             opacity: 1;
           }
-        } 
+        }
       }
     }
   }

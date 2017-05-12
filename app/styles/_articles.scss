@@ -1,12 +1,12 @@
-.center-text { 
-  text-align: center; 
+.center-text {
+  text-align: center;
 }
 
-.article-box, .team-area, .pre-order, .mail-area { 
+.article-box, .team-area, .pre-order, .mail-area {
   margin: 4em;
   margin-left: 5%;
   margin-right: 5%;
-  
+
   @include media($medium-screen) {
     margin: 4em;
     margin-left: 25%;
@@ -207,7 +207,7 @@
       height: 10em;
       margin-bottom: 2.6em;
       opacity: 0.8;
-      margin: auto; 
+      margin: auto;
     }
 
   .grid-item h1 {
@@ -265,9 +265,9 @@
     margin-bottom: 6em;
     width: 90%;
     height: 4em;
-    text-align: center-text; 
+    text-align: center-text;
   }
-  .email { 
+  .email {
     margin-bottom: 1em;
     }
 
@@ -279,9 +279,16 @@
       }
   }
 }
-  
+
 input.email {
-  margin-left: auto; 
+  margin-left: auto;
   margin-right: auto;
-  text-align: center;  
-} 
+  text-align: center;
+}
+
+.centercontainerfb {
+  .fb-follow {
+    height: auto;
+    margin: auto;
+  }
+}
